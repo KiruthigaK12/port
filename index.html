@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV template</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Montserrat font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+  </head>
+  <body>   
+    <section>
+      <!-- MOBILE NAVIGATION -->
+      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-none"></a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
+      </div>
+      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+        <a href="#about" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">ABOUT</a>
+        <a href="#resume" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">RESUME</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">CONTACT</a>
+      </div>
+
+      <!-- SOCIAL SECTION -->
+      <section class="image-section w3-quarter w3-fixed w3-padding-small">
+        <!--IMAGE/AVATAR-->
+        <img src="data:image/jpeg;base64,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" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
+        <!--SCIAL NETWORK BUTTONS-->
+        <div class="links w3-margin-top w3-padding-small">
+         
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.linkedin.com/in/kiruthiga-k2003/" target="_blank">
+             <i data-feather="linkedin"></i>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://github.com/KiruthigaK12" target="_blank">
+             <i data-feather="github"></i>
+          </a>
+        </div>
+        <!--CV DOWNLOAD BUTTON-->
+        <div class="w3-container w3-padding-16">
+          <a href="Resume12.pdf" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+            <span class="w3-margin-left download-text">DOWNLOAD CV</span>
+          </a>
+          </div>
+          <div>
+          <a href="Certificate.pdf" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+            <span class="w3-margin-left download-text">Certificate</span>
+          </a>
+        </div>
+      </section>
+
+      <!--CV CONTENT SECTION-->
+      <section class="w3-threequarter w3-padding-large w3-right">
+        <!--DESKTOP NAVIGATION-->
+        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">CURRICULUM VITAE</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+          <a href="#resume" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
+          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+        </div>
+        <div class="content-container w3-margin-top-2">
+          <!--HOME SECTION-->
+          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+            <p style="font-style: italic; font-size:x-large;">“Work hard, be kind, and amazing things will happen.” ...</p>
+            <h2>Kiruthiga K</h2>
+            <h2>PreFinalYear Student @SKCT </h3>
+            <p></p>
+          </div>
+
+          <!--ABOUT SECTION-->
+          <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
+            <p class="w3-margin-top-2"> 
+            Hi everyone 👋,I am Kiruthiga K
+            <br> 
+            A budding developer with an aspiring vision
+            to create innovative solutions .With the drive for continuous learning,
+            I am dedicated in learning the new skills and and 
+            exploring new opportunities.Thank you for visiting,
+            and I look forward to sharing my journey with you.
+            </p>
+          </div>
+
+          <!--RESUME-->
+          <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">RESUME</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+
+                <!---EDUCATION SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+                <h3 class="w3-border-amber">MY EDUCATION</h3>
+                  <h4>Bachelor of Engineering in</h4>
+                  <h4>Electronics and Communication Engineering</h4>
+                  <h4>Sri Krishna College of Technology</h4>
+                  <p>November 2021 - July 2025 </p>
+                  <h4>Highschool</h4>
+                  <h4>PSGR Krishnammal Higher Secondary School,Coimbatore</h4>
+                  <p>2019-2021 </p>
+              </div>
+             
+
+            <!--SKILLS SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY SKILLS</h3>
+              <!--SOFT SKILLS-->
+              <h4>Soft skills</h4>
+              <ul class="w3-ul" style="font-weight: 500;">
+                <li>I have a good communication skill and confidence in front of an audience</li>
+                <li>Postive Attitude</li>
+
+              </ul>
+
+              <!--TECHNICAL SKILLS-->
+              <h4>Technical skills</h4>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>JAVA</li>
+                  <li>DBMS</li>
+                  <li>HTML,CSS & JS</li>
+                  <li>React JS</li>
+                  <li>Spring Boot</li>
+                  <li>PostMan</li>
+                  <li>AWS</li>
+                  
+                </ul>
+                <!--CERTIFICATIONS-->
+             <h4>Certifications</h4>
+             <ul class="w3-ul" style="font-weight: 500;">
+               <li>DSA with JAVA</li>
+               <li>DBMS</li>
+               <li>Postman Student Expert Certification</li>
+               <li>Introduction on Cloud Computing on AWS</li>
+               <li>IOT from Tesslove</li>
+             </ul>
+             <h4>Internship</h4>
+             <h2>Web Developer Intern in Exposys Data Lab</h2>
+             <p>Worked on developing web applications using html,css,java and React</p>
+             <h2>IOT Intern on Enthu Technology solutions Coimbatore</h2>
+             <p>Got an hands on experience on ESP32,interfacing with different sensors and explored Thingspeak.</p>
+             <ul class="w3-ul" style="font-weight: 500;">
+               
+             
+             </ul>
+            </div>
+            <!--PROJECTS-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+            <h3 class="w3-border-amber">Projects</h3>
+            <ul class="w3-ul" style="font-weight: 500;">
+                
+                <h2>Voting System</h2>
+                <p>The voting system aims to provide a platform for users to
+                participate in elections with posting updating and deleting their 
+                votes(CRUD).The system consists of a frontend application built with
+                React.js and a backend server implemented using Spring Boot and database .</p>
+                <h2>Expense Tracker</h2>
+                <p>Built using React.js and Redux, allows users to monitor their
+                spending habits and manage their finances effectively.</p>
+            </ul>
+
+
+            <!--INTERESTS SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY HOBBIES AND INTERESTS</h3>
+                <ul class="w3-ul" style="font-weight: 500;">
+                 <p> In developing dynaminc web applications and integerating all tech stacks</p>
+                 <p>Learning new tech stacks in the market</p>
+                 <p>Playing badmitton and gardening one of favourite hobbies</p>
+                </ul>
+            </div>
+
+            
+
+          <!--CONTACT SECTION-->
+          <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
+            <div class="w3-margin-top-2" style="font-weight: 500;">
+              <p>Name: Kiruthiga K</p>
+              <p>Adress:Coimbatore</p>
+              <p>Phone number:+916383647851</p>
+              <p>E-mail: kiruthigakeceskct@gmail.com</p>
+            </div>
+          </div>
+
+        <!--FOOTER-->
+        <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+        <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+          <p>© 2024 - Kiruthiga K</p>
+        <!-- End footer -->
+        </footer>
+
+
+        <!--END OF CV SECTION-->
+      </section>      
+    </section>
+    <script>
+      // Function to toggle mobile navigation
+      function toggleNavigation() {
+        let nav = document.getElementById("mobile-nav");
+        if (nav.classList.contains('w3-show')) {
+          nav.classList.remove('w3-show');
+        } else { 
+          nav.classList.add('w3-show');
+        }
+      }
+    </script>
+    <script>
+      // Script to load feather icons
+      feather.replace()
+    </script>
+  </body>
+</html>
